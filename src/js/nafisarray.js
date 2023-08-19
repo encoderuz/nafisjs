@@ -11,5 +11,6 @@ export const nafisArray = function (arr){
         push: (data) => arr.push(data),
         shift: () => arr.shift(),
         unshift: (data) => arr.unshift(data),
+        delete: (index) => delete arr[index],
     }
 }
