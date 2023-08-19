@@ -1,4 +1,4 @@
-import { getText, addClass} from "./src/js/utils/dom";
+import { getText, addClass, css } from "./src/js/utils/dom";
 
 function nafis(selector) {
     var self = {
@@ -8,9 +8,9 @@ function nafis(selector) {
         on: (event, callback) => {
             return self.element.addEventListener(event, callback)
         },
+        css: (styles) => css(styles, self),
         addClass: (className) => addClass(className, self)
     };
     return self;
 }
-// Assign the initialization function to the global variable $n
 window.$n = nafis;
