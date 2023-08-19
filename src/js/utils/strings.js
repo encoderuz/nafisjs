@@ -34,13 +34,13 @@ function trim(self){
     return self;
 }
 function padStart(self,targetLength, padString){
-    const fullNumber = self.element.innerText;
+    const fullNumber = self.element.innerText.toString();
     const slicenum = fullNumber.slice(targetLength);
     self.element.innerText = slicenum.padStart(fullNumber.length, padString);
     return self;
 }
 function padEnd(self,targetLength, padString){
-    const fullNumber = self.element.innerText;
+    const fullNumber = self.element.innerText.toString();
     const slicenum = fullNumber.slice(targetLength);
     self.element.innerText = slicenum.padEnd(fullNumber.length, padString);
     return self;
