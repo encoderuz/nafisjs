@@ -25,4 +25,8 @@ function lower(self) {
     self.element.innerText = self.element.innerText.toLowerCase();
     return self;
 }
-export {strLength, strSlice, strSubstr, strReplace, strReplaceAll, upper, lower}
+function concat(self, string, target){
+    self.element.innerText = self.element.innerText.concat(string,target)
+    return self;
+}
+export {strLength, strSlice, strSubstr, strReplace, strReplaceAll, upper, lower, concat}

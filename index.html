@@ -8,13 +8,14 @@
 
 <div id="wrapper">
     <h1 class="h1">Welcome to JS LIBRARY</h1>
-    <h1>Welcome to Nafis js</h1>
+    <h1 class="h2">Welcome to Libjs</h1>
 </div>
 <script type="module">
     import './main';
-    $n('.h1').upper()
-
-    console.log($n('.h1').lower().text() )
+    let first = $n('.h1');
+    let second = $n('.h2').text();
+    let conc = $n('.h2').concat(" | ", second).text() ;
+    console.log( conc)
 
 </script>
 </body>

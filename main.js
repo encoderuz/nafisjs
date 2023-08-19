@@ -1,5 +1,5 @@
 import { getText, addClass, css } from "./src/js/utils/dom";
-import {strLength, strSlice, strSubstr, strReplace, strReplaceAll, upper, lower} from "./src/js/utils/strings";
+import {strLength, strSlice, strSubstr, strReplace, strReplaceAll, upper, lower, concat} from "./src/js/utils/strings";
 
 function nafis(selector) {
     var self = {
@@ -30,6 +30,7 @@ function nafis(selector) {
         strReplaceAll: (find, replace) => strReplaceAll(find, replace, self),
         upper: (text) => upper(self),
         lower: (text) => lower(self),
+        concat: (string, target) => concat(self, string, target)
     };
     return self;
 }
