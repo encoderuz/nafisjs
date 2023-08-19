@@ -4,5 +4,8 @@ export const nafisArray = function (arr){
             console.log(arr)
             return self;
         },
+        length: () => {
+            return arr.length;
+        }
     }
 }
