@@ -4,6 +4,9 @@ import {strLength, strSlice, strSubstr, strReplace} from "./src/js/utils/strings
 function nafis(selector) {
     var self = {
         element: document.querySelector(selector),
+        all: () => {
+            return  document.querySelectorAll(selector)
+        },
         html: () => self.element,
         text: (text) => getText(text, self),
         on: (event, callback) => {
