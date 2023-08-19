@@ -5,13 +5,16 @@
     <title>Nafis js</title>
 </head>
 <body>
-<h1>Welcome to Nafis js</h1>
+
+<div id="wrapper">
+    <h1 class="h1">Welcome to Nafis js</h1>
+    <h1>Welcome to Nafis js</h1>
+</div>
 <script type="module">
     import './main';
-    $n('h1').css({
-        color: 'green'
-    })
 
+
+    console.log($n('.h1').strReplace('Nafis', 'Abdukodir').text())
 </script>
 </body>
 </html>
