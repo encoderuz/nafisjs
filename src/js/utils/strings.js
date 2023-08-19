@@ -29,4 +29,20 @@ function concat(self, string, target){
     self.element.innerText = self.element.innerText.concat(string,target)
     return self;
 }
-export {strLength, strSlice, strSubstr, strReplace, strReplaceAll, upper, lower, concat}
+function trim(self){
+    self.element.innerText.trim();
+    return self;
+}
+function padStart(self,targetLength, padString){
+    const fullNumber = self.element.innerText;
+    const slicenum = fullNumber.slice(targetLength);
+    self.element.innerText = slicenum.padStart(fullNumber.length, padString);
+    return self;
+}
+function padEnd(self,targetLength, padString){
+    const fullNumber = self.element.innerText;
+    const slicenum = fullNumber.slice(targetLength);
+    self.element.innerText = slicenum.padEnd(fullNumber.length, padString);
+    return self;
+}
+export {strLength, strSlice, strSubstr, strReplace, strReplaceAll, upper, lower, concat, trim, padStart, padEnd}
