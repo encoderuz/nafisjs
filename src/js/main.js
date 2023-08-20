@@ -12,7 +12,8 @@ import {
     upper
 } from "./utils/strings";
 export function nafisjs (selector) {
-    return {
+    const self =  {
+        // Dom methods
         element: document.querySelector(selector),
         all: (callback) =>{
             if (callback){
@@ -30,7 +31,20 @@ export function nafisjs (selector) {
         },
         css: (styles) => css(styles, self),
         addClass: (className) => addClass(className, self),
-
+        activeTag: () => document.activeElement.tagName,
+        url: document.URL,
+        uri: document.baseURI,
+        charsetSet: document.characterSet,
+        open: () => document.open(),
+        write: (write) => document.write(write),
+        close: () => document.close(),
+        cookie: (cookie) => {
+            if (cookie){
+                return document.cookie = cookie;
+            }else{
+                return document.cookie
+            }
+        },
         // loop methods
         // string methods
         strCount: () => strLength(self),
@@ -44,7 +58,6 @@ export function nafisjs (selector) {
         trim: () => trim(self),
         padStart: (targetLength, padString) => padStart(self, targetLength, padString),
         padEnd: (targetLength, padString) => padEnd(self, targetLength, padString),
-
-
     }
+    return self;
 };

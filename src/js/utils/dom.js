@@ -13,4 +13,7 @@ function addClass(className, self) { className.split(' ').forEach((cls) => self.
      }
      return self;
  }
-export {getText, addClass, css};
+ function activeTag(){
+
+ }
+export {getText, addClass, css, activeTag};
