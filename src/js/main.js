@@ -1,4 +1,4 @@
-import {addClass, css, getText} from "./utils/dom";
+import {addClass, css, getText, attr, cmnt, createEl} from "./utils/dom";
 import {
     concat,
     lower, padEnd,
@@ -45,6 +45,9 @@ export function nafisjs (selector) {
                 return document.cookie
             }
         },
+        createEl: (tagName) => createEl(self, tagName),
+        attr: (attribute, value = null) => attr(self, attribute, value),
+        cmnt: (comment) => cmnt(self, comment),
         // loop methods
         // string methods
         strCount: () => strLength(self),
